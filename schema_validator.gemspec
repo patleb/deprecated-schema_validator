@@ -14,9 +14,13 @@ Gem::Specification.new do |s|
   s.description = "SchemaValidator"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 5.0"
+  s.add_dependency "activesupport", ">= 4.2", "< 6"
   s.add_dependency "ice_nine", "~> 0.11"
   s.add_dependency "json-schema", "~> 2.6"
+
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "require_all"
 end
